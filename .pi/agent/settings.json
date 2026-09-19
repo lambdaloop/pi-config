@@ -12,12 +12,12 @@
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:@narumitw/pi-btw",
     "npm:@juicesharp/rpiv-todo",
-    "npm:pi-blackhole",
     "npm:@juicesharp/rpiv-advisor",
     "npm:pi-zentui",
     "npm:pi-session-finder",
     "npm:@lambdaloop/pi-thinking-steps",
-    "npm:@lambdaloop/pi-ipython-subagents"
+    "npm:@lambdaloop/pi-ipython-subagents",
+    "npm:@sting8k/pi-vcc"
   ],
   "hideThinkingBlock": false,
   "tokenSpeed": {
