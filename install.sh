@@ -32,6 +32,10 @@ if [[ -e "$HOME/.pi" ]]; then
   target_root=$(dirname -- "$(readlink -f "$HOME/.pi")")
 fi
 
+# Keep ~/.pi and ~/.pi/agent as real directories so Stow links individual
+# tracked files instead of folding the entire ~/.pi directory into the repo.
+mkdir -p "$target_root/.pi/agent"
+
 if "$overwrite"; then
   backup_root="$target_root/.pi-config-backups/$(date +%Y%m%d-%H%M%S)"
   backed_up=false
