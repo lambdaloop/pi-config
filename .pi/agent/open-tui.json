@@ -1,0 +1,35 @@
+{
+  "enabled": false,
+  "settingsLanguage": "en",
+  "cursorStyle": "block",
+  "fullscreen": {
+    "wheelScrollLines": 4
+  },
+  "icons": {
+    "mode": "auto"
+  },
+  "footerSegments": {
+    "cwd": true,
+    "sessionName": false,
+    "gitBranch": false,
+    "gitStatus": false,
+    "gitCommit": false,
+    "runtime": false,
+    "context": true,
+    "tokens": true,
+    "cost": true,
+    "extensionStatuses": true
+  },
+  "telemetry": {
+    "enabled": true,
+    "tps": true,
+    "ttft": true,
+    "duration": true,
+    "tokens": true,
+    "stalls": true,
+    "cost": true
+  },
+  "thinkingPeek": {
+    "lines": 1
+  }
+}

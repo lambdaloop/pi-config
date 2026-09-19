@@ -1,0 +1,166 @@
+{
+  "components": {
+    "editor": {
+      "enabled": true,
+      "style": "minimalist",
+      "colorSource": "theme",
+      "borderColorMode": "adaptive",
+      "modelLabel": "id",
+      "viewportIndicators": false,
+      "styles": {
+        "opencode": {
+          "metadataFormat": "$model  $provider(  $thinking)",
+          "completionMenu": "palette"
+        },
+        "opencode-copy-friendly": {
+          "metadataFormat": "$model  $provider(  $thinking)",
+          "completionMenu": "palette"
+        },
+        "accent-rail": {
+          "rail": "▎",
+          "asciiRail": "|",
+          "transparent": false
+        },
+        "minimalist": {
+          "pathDisplay": "compact",
+          "contextFormat": "percent-total",
+          "contextGauge": false,
+          "showSessionName": false,
+          "showTimer": true,
+          "showCost": true,
+          "showGit": false,
+          "contextThresholds": {
+            "warning": 70,
+            "error": 90
+          }
+        }
+      }
+    },
+    "footer": {
+      "style": "starship",
+      "colorSource": "theme",
+      "modelLabel": "id",
+      "styles": {
+        "starship": {
+          "format": "",
+          "responsive": true,
+          "compactFormat": "$cwd$wrap(in $session_name)$wrap(on $git_branch) $git_status$wrap$context$wrap_sep$tokens",
+          "compactMaxLines": 2,
+          "separator": "dot",
+          "contextStyle": "text",
+          "contextThresholds": {
+            "warning": 70,
+            "error": 90
+          },
+          "pathDisplay": {
+            "mode": "full",
+            "depth": 2
+          },
+          "segments": {
+            "cwd": true,
+            "sessionName": true,
+            "gitBranch": false,
+            "gitStatus": false,
+            "gitCounts": false,
+            "gitCommit": false,
+            "gitMetrics": false,
+            "runtime": false,
+            "modelInfo": false,
+            "context": false,
+            "tokens": false,
+            "cost": false,
+            "sessionDuration": false,
+            "username": false,
+            "time": false,
+            "os": false,
+            "packageVersion": false
+          },
+          "gitBranch": {
+            "maxLength": 10
+          },
+          "gitCommit": {
+            "hashLength": 7,
+            "onlyDetached": false,
+            "showTag": true
+          },
+          "gitMetrics": {
+            "onlyNonzero": true,
+            "ignoreSubmodules": false
+          },
+          "extensionStatuses": {
+            "defaultPlacement": "right",
+            "placements": {
+              "pi-cache-stats": "right",
+              "thinking-steps": "off"
+            },
+            "colorModes": {
+              "tokenSpeed": "zentui",
+              "thinking-steps": "zentui",
+              "pi-cache-stats": "zentui"
+            }
+          }
+        }
+      }
+    },
+    "userMessages": {
+      "enabled": true,
+      "style": "compact",
+      "colorSource": "theme",
+      "styles": {
+        "framed": {},
+        "framed-copy-friendly": {},
+        "compact": {},
+        "labeled": {}
+      }
+    },
+    "thinkingSteps": {
+      "enabled": false,
+      "mode": "tree"
+    },
+    "workingLine": {
+      "enabled": false,
+      "turnSummary": true,
+      "spinner": "braille",
+      "spinnerIntervalMs": 160,
+      "animateSpinnerColor": false,
+      "textIntervalMs": 60,
+      "textAnimation": "disabled",
+      "colorSource": "theme",
+      "messages": {
+        "custom": false,
+        "values": [
+          "Sautéing…",
+          "Cooking…",
+          "Ionizing…",
+          "Zigzagging…",
+          "Razzle-dazzling…",
+          "Photosynthesizing…",
+          "Nucleating…",
+          "Brewing…",
+          "Combobulating…",
+          "Boogieing…",
+          "Befuddling…",
+          "Alchemizing…",
+          "Conjuring…",
+          "Baking…",
+          "Simmering…",
+          "Blanching…"
+        ]
+      },
+      "segments": {
+        "tool": true,
+        "elapsed": true,
+        "thought": true,
+        "tokens": true
+      }
+    },
+    "selectorBorders": {
+      "enabled": true,
+      "style": "zentui",
+      "colorSource": "theme"
+    }
+  },
+  "icons": {
+    "mode": "auto"
+  }
+}

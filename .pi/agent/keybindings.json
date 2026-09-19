@@ -1,0 +1,6 @@
+{
+  "app.interrupt": ["escape", "ctrl+g"],
+  "app.editor.external": [],
+  "tui.select.cancel": ["escape", "ctrl+c", "ctrl+g"],
+  "tui.altScreen.searchClose": ["escape", "ctrl+g"]
+}

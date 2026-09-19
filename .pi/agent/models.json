@@ -1,0 +1,71 @@
+{
+  "providers": {
+    "deepseek": {
+      "compat": {
+        "supportsLongCacheRetention": true,
+        "sendSessionAffinityHeaders": true
+      }
+    },
+    "glm53-local": {
+      "name": "GLM-5.3-Flash EXL3 (local Docker)",
+      "baseUrl": "http://10.123.1.166:8012/v1",
+      "api": "openai-completions",
+      "apiKey": "local",
+      "compat": {
+        "supportsStore": false,
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": false,
+        "thinkingFormat": "chat-template",
+        "chatTemplateKwargs": {
+          "enable_thinking": {"$var": "thinking.enabled"}
+        },
+        "maxTokensField": "max_tokens"
+      },
+      "models": [
+        {
+          "id": "GLM-5.3-Flash-EXL3-3.5bpw",
+          "name": "GLM-5.3-Flash EXL3 (Docker, TP2)",
+          "reasoning": true,
+          "input": ["text"],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 499968,
+          "maxTokens": 16384
+        }
+      ]
+    },
+    "qwen38-sglang": {
+      "name": "Qwen3.8-27B (local SGLang)",
+      "baseUrl": "http://127.0.0.1:8888/v1",
+      "api": "openai-completions",
+      "apiKey": "local",
+      "compat": {
+        "supportsStore": false,
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": false,
+        "maxTokensField": "max_tokens",
+        "thinkingFormat": "qwen-chat-template"
+      },
+      "models": [
+        {
+          "id": "qwen3.8-27b-6000pro",
+          "name": "Qwen3.8-27B RTX PRO 6000",
+          "reasoning": true,
+          "input": ["text", "image"],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 16384
+        }
+      ]
+    }
+  }
+}
