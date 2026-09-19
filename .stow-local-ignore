@@ -1,3 +1,6 @@
 ^README\.md$
 ^install\.sh$
 ^\.stow-local-ignore$
+^\.git$
+^\.gitignore$
+^\.gitmodules$

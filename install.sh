@@ -18,7 +18,6 @@ case "${1:-}" in
 esac
 
 repo_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
-repo_parent=$(dirname -- "$repo_root")
 
 command -v stow >/dev/null 2>&1 || {
   printf 'stow is required but was not found\n' >&2
@@ -57,5 +56,12 @@ if "$overwrite"; then
   fi
 fi
 
-stow -d "$repo_parent" -t "$target_root" pi-config
+# GNU Stow refuses to operate when the stow directory and the target
+# directory are the same, so keep the package in a dedicated stow directory.
+# The package entry is a symlink to this repo, which may live anywhere.
+stow_root="$target_root/.dotfiles"
+mkdir -p "$stow_root"
+ln -sfn "$repo_root" "$stow_root/pi-config"
+
+stow -d "$stow_root" -t "$target_root" pi-config
 printf 'Pi configuration linked into %s/.pi/agent\n' "$HOME"
