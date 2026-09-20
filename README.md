@@ -33,8 +33,6 @@ pi
 
 Pi will install the missing npm packages listed in `settings.json` on first
 startup (network access is required). Authenticate separately with `/login`.
-The configured local-model entries only work if their servers are reachable
-from the new machine.
 
 Package specs are currently unpinned, so a new machine may receive newer
 package releases. Pin the `npm:` entries if exact package reproducibility is
